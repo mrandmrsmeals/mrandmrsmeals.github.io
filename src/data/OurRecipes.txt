@@ -9,7 +9,7 @@ ________________
 
 
 Title
- Hawaii Kalbi
+Hawaii Kalbi
 
 
 Image
@@ -373,7 +373,7 @@ To Make Korokke Patties
 5. In a large skillet, heat oil on medium-high heat. Sauté onion until soft.
 6. Add carrot and shiitake mushrooms and cook until they are soft.
 7. Add the meat and break it up with a wooden spoon. When the meat is cooked through, add salt, white pepper, and black pepper. Remove from the heat.
-8. Add the meat mixture to the mashed potatoes in the large pot, leaving the cooking liquid behind as we don't want to introduce too much moisture to the mixture.
+8. Add the meat mixture to the mashed potatoes in the large pot, leaving the cooking liquid behind as we don+t want to introduce too much moisture to the mixture.
 9. Add an egg. Mix it all together until everything is well combined.
 10. While the mixture is still warm, but not hot, start shaping the mixture into Korokke patties. Cover and let the Korokke patties rest in the fridge for 30 minutes (Do not skip!). TIP: Resting and cooling down the patties prevents the croquettes from exploding while deep frying. The cold patties in the hot oil will not release any steam; therefore, croquettes will not explode in the oil. If you skip this process and the patties are still warm, the temperature of the patties will go up and start to steam, which will then puncture a hole in the panko coating and explode. It also helps the ingredients to meld together.
 
@@ -651,7 +651,7 @@ Directions
 done
 ________________
 title
-Grand Ma’s Tofu (Mabo Tofu)
+Grandma’s Japanese Mabo Tofu
 
 
 Image
@@ -1511,7 +1511,7 @@ category
 Breakfast
 ________________
 title
-McDonalds Breakfast Burrito
+Savory Mcdonalds Breakfast Burrito
 
 
 Image
@@ -1532,7 +1532,7 @@ Ingredients
 	Fresh tomatoes, diced
 	1
 	Tbsp
-	Green chilies (diced, from can)
+	Jalapenos, diced
 	10
 	
 
@@ -1551,7 +1551,7 @@ Ingredients
 
 Directions
 1. Crumble and fry pork sausage, stir and separate meat so it will fry into small little pieces. Remove from heat, and drain excess grease.
-2. Place drained sausage in a frying pan, add onion, green chilies, and tomatoes. Heat on medium temperature just until sausage and vegetables are heated through, stir frequently.
+2. Place drained sausage in a frying pan, add onion, jalepenos, and tomatoes. Heat on medium temperature just until sausage and vegetables are heated through, stir frequently.
 3. Measure 2 cups of eggs and beat. Add the eggs to the pan with the sausage mixture. When cooked, remove from heat.
 4. To assemble, place two tablespoons of the sausage and egg mixture onto 1 tortilla, teach each slice of American cheese into two even portions, then place the cheese on top of the sausage mixture, and roll the tortilla.
 5. If you make these all ahead of time, you can wrap them in plastic to store them in the fridge or freezer, and then heat them up in the microwave for a minute or two.
@@ -1695,7 +1695,7 @@ Ingredients
 	eggs
 	1
 	tsp
-	vanilla
+	Vanilla extract
 	1-1/2
 	cup
 	flour
@@ -1707,17 +1707,26 @@ Ingredients
 	salt
 	1
 	cup
-	Mashed banana
+	Over-ripe banana
 	1/2
 	cup
 	Sour cream
 	
 
+	
+
+	Cinnamon
+	
+
 Directions
-1. Grease 1 large loaf pan
-2. Cream margarine, sugar, eggs, and vanilla
-3. Add dry ingredients, then bananas, and sour cream
-4. Bake at 350 F for 1 hour 
+1. Melt butter.
+2. Combine eggs, honey, vanilla extract, melted butter in a large bowl and whisk until combined.
+3. Add salt, baking soda, and flour. Whisk well.
+4. Add bananas and mix to desired chunkiness.
+5. Add sour cream.
+6. Sprinkle cinnamon on top of the mix.
+7. Grease 1 large loaf pan or cupcake pan.
+8. Bake at 350 F for 1 hour. Check for doneness with a toothpick.
 done
 ________________
 category
@@ -2006,7 +2015,7 @@ Done
 
 
 title
-Spicy Tantanmen Ramen
+Spicy Tan Tan Ramen
 
 
 Image
@@ -2039,7 +2048,7 @@ Ingredients
 	garlic
 	1
 	oz
-	ginger (5.5 ½ tsp powder) 
+	ginger (5.5 tsp powder) 
 	1
 	Tbsp
 	Toban djian (Chinese chili bean paste)
@@ -2184,11 +2193,61 @@ Ingredients
 Directions
 
 
-1. Rinse broccolini under cool water and shake off excess water. Trim about ½ inch off the bottom of the stems.
-2. Heat oil in large skillet over medium-high head until shimmering. Add broccolini and saute until broccolini is bright green and some stems and tops of the florets are lightly charred, 5-7 minutes
-3. Add garlic, salt, and red pepper flakes. Continue to saute until the garlic is fragrant, about 30 seconds.
-4. Add the water, cover and cook until broccolini is vibrant green and crisp-tender, 1 to 2 minutes.
-5. Serve immediately, with lemon wedges.
+12. Rinse broccolini under cool water and shake off excess water. Trim about ½ inch off the bottom of the stems.
+13. Heat oil in large skillet over medium-high head until shimmering. Add broccolini and saute until broccolini is bright green and some stems and tops of the florets are lightly charred, 5-7 minutes
+14. Add garlic, salt, and red pepper flakes. Continue to saute until the garlic is fragrant, about 30 seconds.
+15. Add the water, cover and cook until broccolini is vibrant green and crisp-tender, 1 to 2 minutes.
+16. Serve immediately, with lemon wedges.
+
+
+Done
+________________
+Title
+Hawaii Mac Salad
+
+
+Image
+no_picture_yet.jpg
+
+
+Ingredients
+1/2
+	lb
+	macaroni
+	1
+	Tbsp
+	Apple cider vinegar
+	1
+	
+
+	Carrot, shredded
+	1.25
+	cup
+	Best Foods mayo
+	0.13
+	cup
+	milk
+	1
+	tsp
+	sugar
+	
+
+	
+
+	Pepper to taste
+	
+
+
+
+Directions
+
+
+1. Cook macaroni and drain. 
+2. Combine mayo, milk, vinegar, carrots and sugar in a bowl and mix.
+3. Add macaroni to the bowl and mix gently.
+4. Add salt and pepper to taste.
+5. Cover and refrigerate for at least 4 hours. 
+6. Serve cold with a splash of shoyu.
 
 
 Done
@@ -2234,11 +2293,11 @@ Ingredients
 Directions
 
 
-6. Boil beans, let water drain on paper towel.
-7. Mix shoyu and wine. Prepare garlic, ginger and red pepper flakes.
-8. Heat pan until one drop of water evaporates in 1-2 sec
-9. Swirl oil in pan
-10. Stir fry garlic and ginger for 8 seconds. Add green beans, toss in shoyu and wine, cook until desired texture/consistency.
+7. Boil beans, let water drain on paper towel.
+8. Mix shoyu and wine. Prepare garlic, ginger and red pepper flakes.
+9. Heat pan until one drop of water evaporates in 1-2 sec
+10. Swirl oil in pan
+11. Stir fry garlic and ginger for 8 seconds. Add green beans, toss in shoyu and wine, cook until desired texture/consistency.
 
 
 Done
@@ -2624,6 +2683,71 @@ Directions
 8. Serve
 
 
+done
+________________
+title
+Bacon Garlic Brussel Sprouts
+
+
+Image
+no_picture_yet.jpg
+
+
+
+
+Ingredients
+1
+	lb
+	Brussel sprouts
+	4
+	strips
+	Bacon
+	10
+	cloves
+	Galic, chopped finely
+	
+
+	
+
+	Olive oil
+	
+
+	
+
+	Black pepper to taste
+	
+
+	
+
+	Salt
+	
+
+	
+
+	Garlic powder
+	
+
+	
+
+	Parmesan cheese
+	
+
+	
+
+	Lemon juice
+	
+
+Directions
+1. Start cooking the bacon on low heat until crispy.
+2. While bacon is cooking, prepare the Brussel sprouts. Cut off the bottom of each Brussel sprout and discard. Half each brussel sprout.
+3. Spead Brussel sprout halves on a baking tray.
+4. Cover with olive oil, black pepper, salt, and garlic powder. Toss to coat evenly.
+5. Bake at 350F until sprouts are bright green (about 10 minutes).
+6. Remove from oven and add garlic. 
+7. Bake at 350F again until the garlic has browned. Then remove from oven.
+8. Top with parmesan cheese and a few drops of lemon juice.
+9. Cut bacon into small pieces on top of the sprouts.
+10. Serve warm.
 done
 
 

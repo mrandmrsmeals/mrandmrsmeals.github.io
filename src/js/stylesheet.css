@@ -136,13 +136,21 @@ a {
 
 #ingredients {
   background-image: linear-gradient(
-  rgba(255, 255, 255, 0.6),
-  rgba(255,255,255,.6));
+  rgba(255, 255, 255, 0.9),
+  rgba(255,255,255,0.9));
+}
+
+.headerbgfade {
+  background-image: linear-gradient(to right,
+  rgb(255, 255, 255),
+  rgba(255, 255, 255, 0.3),
+  rgba(255, 255, 255, 0));
 }
 
 .ingredientline {
   background-image: linear-gradient(to right,
   rgb(255, 255, 255),
+  rgba(255, 255, 255, 0.8),
   rgba(255, 255, 255, 0));
 }
 

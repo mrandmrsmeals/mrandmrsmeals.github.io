@@ -34,12 +34,55 @@ function loadHomeEvents(id){
   });
 }
 
+function executeSearch(){
+  //active tags lose meaning when searching for recipes by name or category
+  removeActiveDropdown('tagdropdown');
+  document.getElementById('tagnavbar').innerHTML = 'Tags';
+  
+  
+  let searchquery = document.getElementById('searchinput').value.trim();
+  let category = document.getElementById('categorydropdown').querySelector('.active');
+  homeView.clearTable();
+  if (category && searchquery){
+    searchRecipes(searchquery,dbrecipe.total,dbrecipe.recipes,category.innerHTML);
+  }
+  //nothing in search bar but a category is active. search results should be all recipes under active category
+  else if(category){
+    searchRecipes('none',dbrecipe.total,dbrecipe.recipes,category.innerHTML);
+  }
+  else{
+    searchRecipes(searchquery,dbrecipe.total,dbrecipe.recipes,'none');
+  }
+  
+}
+
+function getRecipesFromCategory(target){
+  //sclae issue. actual database would server better here
+  let recipesFromCategory=[];
+  if(target=="Categories"){
+    dbrecipe.total.forEach(recipeid =>{
+      recipesFromCategory.push(dbrecipe.recipes[recipeid])
+    });
+  }else{
+    dbrecipe.total.forEach(recipeid =>{
+      dbrecipe.recipes[recipeid].categories.forEach(category =>{
+        if(category==target){
+          recipesFromCategory.push(dbrecipe.recipes[recipeid])
+        }
+      });
+    });
+
+  }
+  
+  return recipesFromCategory;
+}
+
 function homeControl(event){
   if (event.target.location.pathname=='/index.html' || event.target.location.pathname=='/'){
     let carouselidlist = ['recent_inner']; //'suggested_inner' 'popular_inner' not implemented yet
     //grab popular, recent and suggested lists TODO
     //let popularrecipes = getRecipes(dbrecipe.popular);
-    let recentrecipes = getRecipes(dbrecipe.recent);
+    let recentrecipes = getRecipesFromID(dbrecipe.recent);
 
     //let popularchunked = separateArrayCarouselSizedChunks(popularrecipes);
     let recentchunked = separateArrayCarouselSizedChunks(recentrecipes);
@@ -48,7 +91,7 @@ function homeControl(event){
       loadHomeEvents(carouselid);
     });
     //homeView.populateCarousels('popular_inner',popularchunked);
-    homeView.populateCarousels('recent_inner',recentchunked);
+    homeView.populateCarousels('recent_inner',recentrecipes);
     homeView.populateCategories(dbrecipe.categories);
     homeView.populateTags(dbrecipe.tags)
     
@@ -67,25 +110,19 @@ function homeControl(event){
     //search bar control
     document.getElementById('searchgo').addEventListener('click', event=>{
 
-      //active tags lose meaning when searching for recipes by name or category
-      removeActiveDropdown('tagdropdown');
-      document.getElementById('tagnavbar').innerHTML = 'Tags';
+      executeSearch()
       
-      let target = event.target;
-      let searchquery = document.getElementById('searchinput').value.trim();
-      let category = document.getElementById('categorydropdown').querySelector('.active');
-      homeView.clearTable();
-      if (category && searchquery){
-        searchRecipes(searchquery,dbrecipe.total,dbrecipe.recipes,category.innerHTML);
+    });
+
+    //listens for event when enter key is pushed
+    document.addEventListener('keydown', key =>{
+      if (event.isComposing || event.keyCode === 229) {
+          return;
+        }
+      //executes search function
+      if(key.code=='Enter' || key.code=='NumpadEnter'){
+          executeSearch();
       }
-      //nothing in search bar but a category is active. search results should be all recipes under active category
-      else if(category){
-        searchRecipes('none',dbrecipe.total,dbrecipe.recipes,category.innerHTML);
-      }
-      else{
-        searchRecipes(searchquery,dbrecipe.total,dbrecipe.recipes,'none');
-      }
-      
     });
 
     document.getElementById('categorydropdown').addEventListener('click', event=>{
@@ -100,26 +137,32 @@ function homeControl(event){
         event.target.classList.add('active');
         document.getElementById('categorynavbar').innerHTML=event.target.innerHTML;
       }
-      
+      let recipesToPopulate = getRecipesFromCategory(document.getElementById('categorynavbar').innerHTML)
+      homeView.populateCarousels('recent_inner',recipesToPopulate);
     });
 
     document.getElementById('tagdropdown').addEventListener('click', event=>{
-      
-      if(event.target.classList.contains("dropdown-item") && event.target.classList.contains("active")){
+      let target = event.target
+      if(target.classList.contains("badge")){
+        target = event.target.parentNode
+      }
+
+      if(target.classList.contains("dropdown-item") && target.classList.contains("active")){
         removeActiveDropdown('tagdropdown')
         homeView.clearTable();
         document.getElementById('recipelist').style.display = "none";
         document.getElementById('tagnavbar').innerHTML = 'Tags';
       }
-      else if(event.target.classList.contains("dropdown-item")){
+      else if(target.classList.contains("dropdown-item")){
         removeActiveDropdown('tagdropdown')
-        let tagkey = event.target.id;
-        event.target.classList.add('active');
-        document.getElementById('tagnavbar').innerHTML=event.target.innerHTML;
+        let tagkey = target.id;
+        target.classList.add('active');
+        document.getElementById('tagnavbar').innerHTML=target.innerHTML;
         let recipelist = dbrecipe.tags[tagkey].recipeids;
         homeView.clearTable();
         searchRecipes('none',recipelist,dbrecipe.recipes,'none')
       }
+      
     });
   }
 
@@ -154,7 +197,7 @@ function separateArrayCarouselSizedChunks(recipearray){
   return chunkedarray
 }
 //get popular recipes from main recipe object
-function getRecipes(recipeids){
+function getRecipesFromID(recipeids){
   
   let recipearray=[];
   recipeids.forEach(id =>{

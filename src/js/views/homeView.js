@@ -12,21 +12,15 @@ export const suggestedListener = events =>{
 
 export const populateCarousels = (carouselid,chunkedlist) =>{
     document.getElementById(`${carouselid}`).innerHTML="";
-    chunkedlist.forEach(itemlist =>{
-        //document.getElementById('suggested').innerHTML="";
-        let caritem = document.createElement('div');
-        let itmbody = document.createElement(`div`);
-        caritem.classList.add(`carousel-item`);
-        itmbody.classList.add(`d-flex`,`justify-content-around`,`mx-auto`);
-        itmbody.style.width='90%';
+    
 
         let cardhtml=`
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-around mx-auto" style="width: 90%;">
+                    
+                        <div class="d-flex justify-content-around mx-auto flex-wrap">
                     `
-        itemlist.forEach(item =>{
+        chunkedlist.forEach(item =>{
             cardhtml = cardhtml + `
-                                <div class="card" style="background-image: url(../img/${item.image}); background-position: center;" id="${item.id}">
+                                <div class="card my-1" style="background-image: url(../img/${item.image}); background-position: center; width:260px; height:260px" id="${item.id}">
                                     <div class="card-content">
                                         <a class="card-title btn btn-lg" href="/recipe.html?recipe=${item.id}" title="${item.name}">${item.name}</a>
                                     </div>
@@ -35,15 +29,15 @@ export const populateCarousels = (carouselid,chunkedlist) =>{
         });
 
         cardhtml=cardhtml + `
-                                </div>
+                                
                             </div>
                             `
         
         document.getElementById(`${carouselid}`).insertAdjacentHTML('beforeend', cardhtml);
-    });
+    
 
     //mark first carousel item as active
-    document.getElementById(`${carouselid}`).querySelector(`.carousel-item`).classList.add(`active`);
+    //document.getElementById(`${carouselid}`).querySelector(`.carousel-item`).classList.add(`active`);
 
     
 };

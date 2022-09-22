@@ -13,7 +13,7 @@ def cleanstring(dirty):
 def newRecipes(txtfile):
     
     #incoming text file is grabbed
-    with open(txtfile) as incomingfile:
+    with open(txtfile,'r',encoding='utf-8-sig') as incomingfile:
         incomingdata = incomingfile.readlines()
     
     #open the database file
@@ -59,7 +59,7 @@ def newRecipes(txtfile):
 #datafile.close()
 
 def processRecipes(txtfile):
-    with open(txtfile) as incomingfile:
+    with open(txtfile,'r',encoding='utf-8-sig') as incomingfile:
         incomingdata = incomingfile.readlines()
 
     with open('db.json') as datafile:

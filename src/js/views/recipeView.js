@@ -21,10 +21,10 @@ export const loadIngredients = recipe =>{
         //console.log(amount,measurement,type,count,count%5);
         if(amount=="0"){
             ingredienthtml = ingredienthtml + `
-            <p class="lead ingredientline">${measurement} ${type}</p>`;
+            <p class="lead ingredientline p-1">${measurement} ${type}</p>`;
         }else{
             ingredienthtml = ingredienthtml + `
-            <p class="lead ingredientline">${amount} ${measurement} ${type}</p>`;
+            <p class="lead ingredientline p-1">${amount} ${measurement} ${type}</p>`;
         }
         
         //ingredientcontainer.insertAdjacentHTML('beforeend',html);

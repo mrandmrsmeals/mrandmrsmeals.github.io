@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cooking Recipes</title>
     
     
     
@@ -15,21 +15,21 @@
   
     
 </head>
-<body>
+<body class="bgimg1">
     <!--main-->
-    <div class="fluid-container main bgimg1" id='main' style="min-height: 100vh; min-width: 100vh;">
+    <div class="main" id='main' style="min-height: 100vh; min-width: 100vh;">
         
         
         
         
         <!--header-->
         
-        <div class="container-fluid" id="recipeheader">
+        <div class="container-fluid p-0 sticky-top" id="recipeheader">
           
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1">
-              <img src="../img/testimg.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-              Food
+            <span class="navbar-brand">
+              <img src="../img/cooking_logo4.png" width="40" height="40" class="d-inline-block align-top" alt="">
+              Mr & Mrs Meals
             </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -43,30 +43,17 @@
                     Sign Up
                   </button>
                 </div>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
                 
-                <ul class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="tagnavbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Tags
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="tagnavbar" id="tagdropdown" style="height: 200px;overflow-y: auto;">
-                    <a class="dropdown-item" href="#">cat1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">cat2</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">...</a>
-                  </div>
-                </ul>
+                
+                
                 
               </ul>
               
               <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="categorynavbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Categories
+                <a class="nav-link dropdown-toggle" href="#" id="tagnavbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tags
                 </a>
-                <div class="dropdown-menu" aria-labelledby="categorynavbar" id="categorydropdown" style="height: 200px;overflow-y: auto;">
+                <div class="dropdown-menu" aria-labelledby="tagnavbar" id="tagdropdown" style="height: 200px;overflow-y: auto;">
                   <a class="dropdown-item" href="#">cat1</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">cat2</a>
@@ -74,6 +61,7 @@
                   <a class="dropdown-item" href="#">...</a>
                 </div>
               </div>
+              
               <div class="d-flex">
                 <input class="form-control mr-sm-2 rounded" type="search" placeholder="Enter recipe name" aria-label="Search" id="searchinput" >
                 <button class="btn btn-outline-success my-2 my-sm-0" id="searchgo">Search</button>
@@ -233,21 +221,33 @@
 
         <!--recentrotation-->
         <div class="container p-4" id='recentrotation'>
-          <div id="recentheader">
+          <div class="d-flex ingredientline p-2 m-0 rounded" id="recentheader">
             <p class="lead"> <b>Recent Items</b></p>
+            <div class="nav-item dropdown mx-3">
+              <a class="nav-link btn btn-outline-primary dropdown-toggle" href="#" id="categorynavbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="categorynavbar" id="categorydropdown" style="height: 200px;overflow-y: auto;">
+                <a class="dropdown-item" href="#">cat1</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">cat2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">...</a>
+              </div>
+            </div>
           </div>
-          <div id="carouselRecent" class="carousel slide" data-ride="carousel" >
-            <div class="carousel-inner" id="recent_inner">
+          <div id="carouselRecent">
+            <div id="recent_inner">
               <div class="carousel-item active">
                   <div class="d-flex justify-content-around mx-auto" style="width: 90%;">
                     <div class="card">
                       <div class="card-content">
-                        <h5 class="card-title">GGGggggpjq</h5>
+                        <h5 class="card-title"></h5>
                       </div>
                     </div>
                     <div class="card">
                       <div class="card-content">
-                        <h5 class="card-title">Tasty Seasoned Fries Cooked in Air Fryer</h5>
+                        <h5 class="card-title"></h5>
                       </div>   
                     </div>
                     
@@ -256,14 +256,7 @@
               </div>
               </div>
               
-              <a class="carousel-control-prev btn btn-light" style="width: 5%; " onclick="this.blur()" href="#carouselRecent" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next btn btn-light" style="width: 5%;" onclick="this.blur()" href="#carouselRecent" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-              </a>
+              
           </div><!--#carouselRecent-->
 
         </div>
@@ -279,8 +272,8 @@
                   
                     <th scope="col" style="width: 40%;"><h5>Recipes</h5></th>
                     
-                    <th scope="col"style="width: 25%;"><h5>Ingredients</h5></th>
-                    <th scope="col"style="width: 25%;"><h5>Description</h5></th>
+                    <th scope="col"style="width: 0%;"><h5></h5></th>
+                    <th scope="col"style="width: 0%;"><h5></h5></th>
                     
                   
                 </thead>
