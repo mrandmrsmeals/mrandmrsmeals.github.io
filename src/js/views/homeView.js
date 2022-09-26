@@ -10,30 +10,32 @@ export const suggestedListener = events =>{
     });
 };
 
-export const populateCarousels = (carouselid,chunkedlist) =>{
+export const populateCarousels = (carouselid,chunkedlist,page) =>{
     document.getElementById(`${carouselid}`).innerHTML="";
-    
+    const start = (page-1)*10;
+    const end = page*10;
+    const pagedlist = chunkedlist.slice(start,end)
 
-        let cardhtml=`
-                    
-                        <div class="d-flex justify-content-around mx-auto flex-wrap">
-                    `
-        chunkedlist.forEach(item =>{
-            cardhtml = cardhtml + `
-                                <div class="card my-1" style="background-image: url(../img/${item.image}); background-position: center; width:260px; height:260px" id="${item.id}">
-                                    <div class="card-content">
-                                        <a class="card-title btn btn-lg" href="/recipe.html?recipe=${item.id}" title="${item.name}">${item.name}</a>
-                                    </div>
+    let cardhtml=`
+                
+                    <div class="d-flex justify-content-around mx-auto flex-wrap">
+                `
+    pagedlist.forEach(item =>{
+        cardhtml = cardhtml + `
+                            <div class="card my-1" style="background-image: url(../img/${item.image}); background-position: center; width:260px; height:260px" id="${item.id}">
+                                <div class="card-content">
+                                    <a class="card-title btn btn-lg" href="/recipe.html?recipe=${item.id}" title="${item.name}">${item.name}</a>
                                 </div>
-                                `
-        });
-
-        cardhtml=cardhtml + `
-                                
                             </div>
                             `
-        
-        document.getElementById(`${carouselid}`).insertAdjacentHTML('beforeend', cardhtml);
+    });
+
+    cardhtml=cardhtml + `
+                            
+                        </div>
+                        `
+    
+    document.getElementById(`${carouselid}`).insertAdjacentHTML('beforeend', cardhtml);
     
 
     //mark first carousel item as active

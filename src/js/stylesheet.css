@@ -30,16 +30,15 @@
   /* The image used */
   background-image: url("/img/wallpaper.png");
   /* Set a specific height */
-  max-width: auto;
+  /*max-width: auto;*/
+
+  
   
 }
-.bgimg2 {
-  /* The image used */
-  background-image: url("/img/dark.jpg");
-  /* Set a specific height */
-  
-  max-width: auto;
-}
+
+
+
+
 
 .bgimgfood{
   background-image: url(../img/american.jpeg);

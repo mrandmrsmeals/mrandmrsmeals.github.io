@@ -53,6 +53,9 @@ function executeSearch(){
   else{
     searchRecipes(searchquery,dbrecipe.total,dbrecipe.recipes,'none');
   }
+  document.getElementById('recipelist').scrollIntoView({
+    behavior: 'smooth'
+  });
   
 }
 
@@ -91,7 +94,7 @@ function homeControl(event){
       loadHomeEvents(carouselid);
     });
     //homeView.populateCarousels('popular_inner',popularchunked);
-    homeView.populateCarousels('recent_inner',recentrecipes);
+    homeView.populateCarousels('recent_inner',recentrecipes,1);
     homeView.populateCategories(dbrecipe.categories);
     homeView.populateTags(dbrecipe.tags)
     
@@ -107,10 +110,29 @@ function homeControl(event){
       }
     });
 
+    //pagination control
+    document.getElementById('viewpagination').addEventListener('click', event=>{
+      console.log(event.target)
+
+      let currentpage = Number(document.getElementById('viewpaginationnumber').dataset.pagenumber)
+      if(event.target.id=="view_prev" && currentpage>1){
+        currentpage = currentpage-1
+        document.getElementById('viewpaginationnumber').dataset.pagenumber = currentpage
+      }
+      if(event.target.id=="view_next" && currentpage<6){ //TODO max pages
+        currentpage = currentpage+1
+        document.getElementById('viewpaginationnumber').dataset.pagenumber = currentpage  
+      }
+      
+      document.getElementById('viewpaginationnumber').innerHTML = document.getElementById('viewpaginationnumber').dataset.pagenumber
+      homeView.populateCarousels('recent_inner',recentrecipes,currentpage);
+    });
+
     //search bar control
     document.getElementById('searchgo').addEventListener('click', event=>{
-
+      
       executeSearch()
+      
       
     });
 
